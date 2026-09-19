@@ -3,7 +3,7 @@
 # vi /etc/profile <for path>
 # source /etc/profile
 # minikube start ,status , version
-#  install kubectl
+#  install kubectl .
 # 
 #
 #
