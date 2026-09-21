@@ -8,8 +8,10 @@ metadata:
 spec:
   replicas: 3
   selector:
-    matchLabels:
-     app: my-app
+   # matchLabels:
+    # app: my-app
+    matchExpressions:
+      - {key: app, operator: In, values: [my-app]}
   template:
     metadata:
       labels:
