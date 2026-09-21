@@ -41,6 +41,7 @@ metadata:
   name:  my-svc
   namespace: ops    
 spec:
+  type: NodePort
   selector:
     app:  my-app
   ports:
