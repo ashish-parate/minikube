@@ -3,6 +3,7 @@ kind: DaemonSet
 
 metadata:
   name: my-ds
+  namespace: ops
   labels:
     app: my-app
 
@@ -13,11 +14,13 @@ spec:
 
   template:
     metadata:
-      namespace: ops
       labels:
         app: my-app
 
     spec:
+      nodeSelector:
+        kubernetes.io/arch: amd64
+
       containers:
         - name: my-app
           image: nginx:latest
