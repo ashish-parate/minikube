@@ -1,16 +1,22 @@
 apiVersion: apps/v1
 kind: DaemonSet
+
 metadata:
   name: my-ds
   labels:
     app: my-app
+
 spec:
+  selector:
+    matchLabels:
+      app: my-app
+
   template:
     metadata:
       namespace: ops
-      name: my-app
       labels:
         app: my-app
+
     spec:
       containers:
         - name: my-app
@@ -19,6 +25,3 @@ spec:
             - name: http
               containerPort: 80
               protocol: TCP
-selector:
-    matchLabels:
-      app: daemonset-pod
