@@ -19,3 +19,6 @@ spec:
             - name: http
               containerPort: 80
               protocol: TCP
+selector:
+    matchLabels:
+      app: daemonset-pod
