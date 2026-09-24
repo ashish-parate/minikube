@@ -18,3 +18,8 @@ spec:
             configMapKeyRef:
               name: mysql-cm
               key: MYSQL_ROOT_PASSWORD
+        - name: MYSQL_HOST
+          valueFrom:
+            configMapKeyRef:
+              name: mysql-cm
+              key: MYSQL_HOST

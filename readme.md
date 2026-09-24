@@ -8,3 +8,4 @@
 #
 #
 k describe configmap mysql-cm
+k exec -it mariadb-pod -- env
