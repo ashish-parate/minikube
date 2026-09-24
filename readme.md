@@ -7,3 +7,4 @@
 # 
 #
 #
+k describe configmap mysql-cm
